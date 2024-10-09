@@ -1,0 +1,45 @@
+'''
+Вводить вещественные числа x, y и z по три в строке через запятую, считая их координатами точек (не менее одной тройки). Конец ввода — пустая строка. Вывести минимальный объём параллелепипеда со сторонами, параллельными осям координат, содержащего все точки.
+'''
+
+x, y, z = eval(input())
+
+if 0 > x:
+    x_min, x_max = x, False
+else:
+    x_min, x_max = False, x
+
+if 0 > y:
+    y_min, y_max = y, False
+else:
+    y_min, y_max = False, y
+
+if 0 > z:
+    z_min, z_max = z, False
+else:
+    z_min, z_max = False, z
+
+
+while str := input():
+    x, y, z = eval(str)
+
+    if x < x_min:
+        x_min = x
+    if x > x_max:
+        x_max = x
+    
+    if y < y_min:
+        y_min = y
+    if y > y_max:
+        y_max = y
+    
+    if z < z_min:
+        z_min = z
+    if z > z_max:
+        z_max = z
+
+if (x_min and x_max and y_min and y_max and z_min and z_max ):
+    
+    print((x_max - x_min)*(y_max - y_min)*(z_max - z_min) ) 
+else:
+    print(0)
